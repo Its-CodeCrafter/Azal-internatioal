@@ -1,7 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
 import Navbar from "./components/Navbar";
-
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Collections from "./components/Collections";
@@ -21,6 +19,8 @@ import Residential from "./pages/sectors/Residential";
 import Commercial from "./pages/sectors/Commercial";
 import Exhibition from "./pages/sectors/Exhibition";
 import Retail from "./pages/sectors/Retail";
+import Contact from "./pages/Contact";
+import ProductDetails from "./pages/ProductDetails";
 
 
 const HomePage = () => {
@@ -55,9 +55,10 @@ function App() {
 
           {/* Cart Page */}
           <Route path="/cart" element={<Cart />} />
-
+          
           {/* Authentication Pages */}
           <Route path="/login" element={<Login />} />
+
           <Route path="/register" element={<Register />} />
            
             <Route path="/about" element={<About />} />
@@ -65,6 +66,12 @@ function App() {
 
                <Route path="/" element={<HomePage />} />
               <Route path="/projects" element={<Projects />} />
+              
+                 <Route path="/" element={<Hero/>}/>
+              <Route path="/contact" element={<Contact/>} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              
 
               <Route path="/global" element={<GlobalPresence />} />
               <Route path="/library" element={<Library />} />
@@ -73,10 +80,10 @@ function App() {
               <Route path="/sectors/commercial" element={<Commercial />} />
               <Route path="/sectors/exhibition" element={<Exhibition />} />
               <Route path="/sectors/retail" element={<Retail />} />
+              <Route path="/products/:id" element={<ProductDetails />} />
         </Routes>
       </main>
     </Router>
   );
-}
-
+};
 export default App;
