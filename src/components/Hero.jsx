@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
+
+
 const Hero = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden flex items-center justify-center bg-slate-900">
